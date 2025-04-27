@@ -4,8 +4,8 @@ function openNewTab(url) {
 
 function scrollToTop() {
   window.scrollTo({
-      top: 0,
-      behavior: 'smooth' // Smooth scrolling effect
+    top: 0,
+    behavior: 'smooth'
   });
 }
 

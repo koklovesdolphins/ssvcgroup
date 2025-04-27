@@ -12,29 +12,33 @@ html, body {
 }
 
 * {
-  box-sizing: inherit; /* Applies the box-sizing rule to all elements */
+  box-sizing: inherit;
 }
 
 body {
   display: flex;
-  flex-direction: column; /* Make the body a flex container */
+  flex-direction: column;
 }
 
 main {
-  flex: 1; /* Allow the main content to grow and take up available space */
+  flex: 1;
 }
 
 @media (max-width: 768px) {
   .main-header {
-    flex-wrap: wrap; /* Allows wrapping of elements if needed */
-    justify-content: center; /* Centers the content */
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .header-nav {
-    flex-wrap: wrap; /* Allows navigation items to wrap if necessary */
-    gap: 15px; /* Reduces the gap between items */
+    flex: 1;
+    flex-wrap: wrap;
+    gap: 15px;
   }
   .header-button {
-    margin-top: 10px; /* Adds spacing for the button in smaller screens */
+    flex: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
   }
 }
 
@@ -45,39 +49,23 @@ main {
   padding: 20px 20px;
   background-color: #f8f9fa;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  gap: 20px; 
-  font-size: 1rem;
+
+  gap: 20px;
+  font-size: 1.2rem;
   white-space: nowrap;
 }
 
-.logo {
-  margin: 0;
-  font-size: 3rem;
-  font-weight: bold;
-  color: #0056b3;
-}
-.logo-link {
-  text-decoration: none; /* Remove underline from the link */
-  color: inherit; /* Inherit the text color */
-}
-.logo:hover {
-  cursor: pointer;
-  transform: scale(1.01);
-  transition: transform 0.2s ease;
-}
 .header-nav {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
 }
 
 .header-nav a {
-  margin-right: 15px;
   text-decoration: none;
   color: #333;
   font-size: 1rem;
   transition: all 0.3s ease;
-  padding: 5px 10px;
 }
 
 .header-nav a:last-child {
@@ -93,7 +81,7 @@ main {
 
 .header-button {
   padding: 10px 20px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #fff;
   background-color: #007bff;
   border: none;
@@ -103,7 +91,7 @@ main {
 }
 
 .header-button:hover {
-  background-color: #0056b3; /* Darker shade for hover effect */
+  background-color: #0056b3;
 }
 
 /* Main section */
@@ -112,14 +100,30 @@ section {
   margin: 20px;
 }
 
+.logo {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #0056b3;
+}
+.logo-link {
+  text-decoration: none;
+  color: inherit;
+}
+.logo:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+  transition: transform 0.2s ease;
+}
+
 #about-company {
   padding: 40px 40px;
   margin: 30px auto 20px; 
   text-align: center;
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth hover effects */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 #about-company h1 {
@@ -129,8 +133,8 @@ section {
 }
 
 #about-company:hover {
-  transform: scale(1.05); /* Slightly enlarge the section on hover */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a stronger shadow on hover */
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 
@@ -143,11 +147,11 @@ section {
 }
 
 .about-logo {
-  margin: 0 auto; /* Center the logo */
+  margin: 0 auto;
   display: block;
-  height: auto; /* Maintain aspect ratio */
+  height: auto;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
   margin-bottom: 40px;
 }
 
@@ -179,30 +183,30 @@ section {
 }
 
 .product-item {
-  display: flex; /* Enables flexbox for the product item */
-  flex-direction: column; /* Stacks children vertically */
-  justify-content: space-between; /* Ensures space between content and button */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: flex-start; 
   text-align: center;
   padding: 20px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  height: 100%; /* Ensures all product items have the same height */
+  height: 100%;
   height: auto;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .product-item:hover {
   transform: scale(1.02);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a stronger shadow on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .product-item img {
   display: block;
   align-self: flex-start;
   width: 100%;
-  min-width: 300px; /* Adjust the maximum width of the image */
-  height: auto; /* Maintains the aspect ratio */
+  min-width: 300px;
+  height: auto;
   margin: 0 auto 10px;
 }
 
@@ -243,25 +247,6 @@ section {
   background-color: #003d80;
 }
 
-/* footer */
-.main-footer {
-  background-color: #f8f9fa;
-  padding: 15px;
-  text-align: center;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
-  font-size: 1rem;
-  color: #333;
-}
-
-.main-footer a {
-  color: #0056b3;
-  text-decoration: none;
-}
-
-.main-footer a:hover {
-  text-decoration: underline;
-}
-
 /* Contact us */
 .contact-section {
   padding: 40px;
@@ -271,13 +256,43 @@ section {
 }
 
 .contact-section h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 20px;
   color: #333;
+  text-align: center;
 }
 
 .contact-section p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-bottom: 20px;
   color: #666;
+}
+
+/* footer */
+.main-footer {
+  background-color: #f8f9fa;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  color: #333;
+}
+
+.main-footer a {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+.footer-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.footer-link:hover {
+  cursor: pointer;
+  color: #0056b3;
+  transform: scale(1.02);
+  transition: transform 0.2s ease;
 }
