@@ -40,6 +40,14 @@ main {
     text-align: center;
     margin-top: 10px;
   }
+  .logo {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.2rem; /* Further reduce font size for very small screens */
+  }
 }
 
 .main-header {
@@ -52,13 +60,13 @@ main {
 
   gap: 20px;
   font-size: 1.2rem;
-  white-space: nowrap;
 }
 
 .header-nav {
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .header-nav a {
@@ -105,6 +113,8 @@ section {
   font-size: 3rem;
   font-weight: bold;
   color: #0056b3;
+  word-wrap: break-word;
+  flex: 1;
 }
 .logo-link {
   text-decoration: none;
