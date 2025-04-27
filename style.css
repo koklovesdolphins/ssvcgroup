@@ -11,11 +11,76 @@ body {
   box-sizing: inherit; /* Applies the box-sizing rule to all elements */
 }
 
-header {
-  background-color: #0056b3;
+@media (max-width: 768px) {
+  .main-header {
+    flex-wrap: wrap; /* Allows wrapping of elements if needed */
+    justify-content: center; /* Centers the content */
+  }
+  .header-nav {
+    flex-wrap: wrap; /* Allows navigation items to wrap if necessary */
+    gap: 15px; /* Reduces the gap between items */
+  }
+  .header-button {
+    margin-top: 10px; /* Adds spacing for the button in smaller screens */
+  }
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  gap: 20px; 
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.logo {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #0056b3;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.header-nav a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  padding: 5px 10px;
+}
+
+.header-nav a:last-child {
+  margin-right: 0;
+}
+
+.header-nav a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.header-button {
+  padding: 10px 20px;
+  font-size: 1rem;
   color: #fff;
-  padding: 1em 0;
-  text-align: center;
+  background-color: #007bff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.header-button:hover {
+  background-color: #0056b3; /* Darker shade for hover effect */
 }
 
 section {
@@ -33,7 +98,7 @@ section {
   display: block;
   margin: 0 auto;
   width: 100%;
-  max-width: 800px; /* Increase the maximum width of the logo */
+  max-width: 1200px;
   height: auto; /* Maintain the aspect ratio */
   margin-bottom: 40px; /* Add spacing below the logo */
 }
@@ -59,7 +124,7 @@ section {
   color: #fff;
   background-color: #0056b3;
   border: none;
-  /* border-radius: 5px; */
+  border-radius: 3px;
   cursor: pointer;
   margin-top: 20px;
 }
@@ -122,6 +187,7 @@ section {
 
 .product-description {
   text-align: left;
+  align-items: flex-start;
   font-size: 1rem;
   font-weight: normal;
   color: #666;
@@ -139,7 +205,7 @@ section {
   border: none;
   border-radius: 3px;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 25px;
   align-self: center;
   align-items: flex-start;
 }
@@ -148,21 +214,20 @@ section {
   background-color: #003d80;
 }
 
-footer {
+.main-footer {
+  background-color: #f8f9fa;
+  padding: 15px;
   text-align: center;
-  padding: 10px 20px;
-  background-color: #0056b3;
-  color: #fff;
-  position: relative; /* Default position */
-  bottom: 0;
-  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+  font-size: 1rem;
+  color: #333;
 }
 
-a {
-  color: #fff;
+.main-footer a {
+  color: #0056b3;
   text-decoration: none;
 }
 
-a:hover {
+.main-footer a:hover {
   text-decoration: underline;
 }
